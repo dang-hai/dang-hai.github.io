@@ -19,7 +19,7 @@ if (res_edu.returncode != 0 or res_prof.returncode != 0):
 f = Path(r'_index.html').read_text()
 index_html = f
 
-out_path = './public/index.html'
+out_path = './docs/index.html'
 
 match = re.search('{(.*)}', index_html)
 while match:
