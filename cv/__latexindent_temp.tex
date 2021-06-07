@@ -1,0 +1,195 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rishi Shah 
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+\usepackage{hyperref}
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Hai Dang} % Your name
+\address{Doctoral HCI Researcher} % Your address
+\address{h.dang@uni-bayreuth.de} % Your phone number and email
+
+\begin{document}
+
+I'm doctoral researcher at the university of Bayreuth and part of the \href{https://www.hciai.uni-bayreuth.de/en/index.html}{HCI+AI research group}.
+My research adopts an empirical user-centric perspective for new interactive systems for generative deep learning models.
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+{\bf University of Bayreuth, Bayreuth Germany } \hfill {\em September 2020 - July 2024} 
+\\ Doctor of Philosophy
+\\ Department of Computer Science \\
+{\bf LMU Munich, Munich Germany } \hfill {\em October 2018 - July 2020} 
+\\ Master of Science
+\\ Department of Computer Science \hfill { GPA: 3.7 | (German Scale: 1.23) }
+\\ Thesis: Representational Learning for Exploring\\Input Spaces in HCI\\
+\\{\bf LMU Munich, Munich Germany} \hfill {\em October 2013 - July 2018} 
+\\ Bachelor of Science
+\\ Department of Computer Science \hfill { GPA: 3.7 | (German Scale: 1.38)}
+\\ Thesis: Deep Conformance Checking \\ Efficient Estimation of Alignment Based Fitness.\\
+\\{\bf Yonsei University, Seoul South Korea} \hfill {\em August 2016 - July 2017} 
+\\ Bachelor of Science
+\\ Department of Computer Science \hfill {\em Year Abroad} 
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Strengths}
+
+    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+    Python Libraries    \ & PyTorch (primarily), Pandas, Numpy, Tensorflow (occasionally)\\
+    Programming Languages: \ &  Python (primarily), JavaScript (for interactive applications), Java\\
+    Frameworks:            \ &  React, Svelte, d3js, MEAN-/MERN-Stack \\
+    DevOps:     \ & Docker, Nginx, Git \\
+    OS:  \ & Unix Systems (primarily), Windows (occasionally)\\
+    \end{tabular}
+    
+\end{rSection}
+
+%--------------------------------------------------------------------------------
+%    Projects And Seminars
+%-----------------------------------------------------------------------------------------------
+\begin{rSection}{Projects}
+
+\begin{rSubsection}{Representational Learning for Exploring Input Spaces in HCI}{Summer Semester 2020}{Master Thesis}{}
+\item Developed an interactive tool to analyze gesture elicitation studies in HCI.
+\item Used a variational autoencoder (Kingma et al. 2014) to learn a two-dimensional representation for every gesture pose in a given data set.
+\item Visualized a gesture map that consists of a grid of gesture pose templates. A sequence of gesture poses was represented as a two-dimensional path on the map.
+\item Introduced new statistical analysis concepts that were projected on the gesture map to exploratively analyze the gestural input.
+\item Introduced the K-means clustering algorithm to separate distinct behavior from gesture elicitations. The cluster centroids were based on the DTW Barycenter Averaging algorithm (Petitjean et al. 2011)
+\item Evaluated the thesis by conducting an expert interview and an in-depth analysis of a previously published gesture elicitation data set.
+\end{rSubsection}
+
+\vfill
+\pagebreak
+
+\begin{rSubsection}{Big Data Science}{Winter Semester 2019}{Seminar: Group Project}{}
+\item Goal: Ensemble five graph embedding models for link prediction on knowledge graphs.
+\item Reimplemented the knowledge graph embedding model ConvE (Dettmers et al. 2018).
+\item Improved computation time by 30\% by using adequate vectorization.
+\item Managed and monitored the machine learning models and the remote training clouds using MlFlow and DVC.
+\item The ensemble model was comparable to the state-of-the-art model RotatE (Sun et al. 2019) but didn't provide significant improvements in link prediction performance.
+\end{rSubsection}
+
+\begin{rSubsection}{Sketching with Hardware}{Summer Semester 2019}{Workshop: Group Project}{}
+\item Topic: Design an interactive game.
+\item Build an interactive beer-pong platform named Pongly.
+\item The game consisted of two wooden rotating platforms, each driven by an electric motor. The speed of the electric motor was controlled by a potentiometer, which players could manipulate during the game to change the rotation speed. Each platform could hold six drinking cups. A LED light and a magnetic sensor in each slot were used to track and visualize whether a cup was placed in the slot. The color of the LED lights indicated which game mode was currently active, e.g., rapid-fire, bonus points, locked cups, and so on.
+\item Programmed the game logic into an Arduino board that was attached to the platforms.
+\item Worked with the laser cutter, 3D printer, and other fabrication tools to produce the components for the game.
+\end{rSubsection}
+
+\begin{rSubsection}{Evaluation of Consumer Grade BCI Devices}{Summer Semester 2019}{Seminar: Group Project}{}
+\item Topic: Experiments with a low-cost EEG-Based Brain-Computer Interface (BCI) from mBrainTrain.
+\item Conducted multiple experiments with an EEG-Cap to measure the cognitive workload level of individual study participants using the N-Back task.
+\item Applied basic signal processing techniques on the raw EEG recordings to extract the alpha and theta frequencies that characterize the cognitive workload.
+\item Trained multiple classifiers (Support Vector Machines, Neural Nets, Random Forrest, K Nearest Neighbors) to differentiate between various workload levels.
+\end{rSubsection}
+
+\begin{rSubsection}{Development of an Interactive Sleep Monitoring Device}{Summer Semester 2019}{Seminar: Group Project}{}
+\item Goal: Conceptualize and developed an interactive sleep monitoring device.
+\item Device featured various sensors, including a light sensor, microphone, dust sensor, and a thermometer. Besides basic alarm clock functionalities, users could provide subjective sleep assessments via built-in buttons. The device had a built-in WiFi module that continuously transmitted the sensor data to a backend server.
+\item Built the analytics backend to collect and analyze sleep data.
+\item Designed the communication protocol between device and backend.
+\end{rSubsection}
+
+\begin{rSubsection}{Power Efficient High Performance Computing}{Winter Semester 2018}{Seminar: Group Project}{}
+\item Goal: Develop a machine learning model to predict the power consumption of a data center in Munich.
+\item Studied the center's warm-water cooling system.
+\item Identified a set of hand-crafted features which were combined with automatically computed features from the raw sensor recordings from the water pumps.
+\item Developed a recurrent neural network model for the prediction of energy consumption.
+\item Achievement: Won the class competition for most accurate predictions by employing an autoregressive recurrent neural network.
+\end{rSubsection}
+
+\begin{rSubsection}{Intelligent User Interfaces}{Winter Semester 2018}{Seminar: Group Project}{}
+\item Goal: Develop various intelligent system prototypes.
+\item Developed an Amazon Alexa voice application to navigate our universities' extracurricular activities web page. It was aimed at first-year undergraduate students who wanted to explore the offerings of our university. 
+\item Developed a basic text summarization and auto-completion tool based on the NLTK library.
+\item Experimented with the IBM Watson cloud to build a system that identifies craft beer bottles and recommends a matching sausage type.
+\end{rSubsection}
+
+\end{rSection}
+
+%\break
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}{SWM, Munich}{August 2019 - November 2019}{Machine Learning Developer}{Working Student}
+\item Collected and integrated electricity data from various 
+transmission system operators
+\item Evaluated different machine learning models to predict feed-in-management operations
+\item Build and deployed an end-to-end machine learning solution (Currently used in production)
+\end{rSubsection}
+
+\begin{rSubsection}{Celonis, Munich}{October 2018 - February 2019}{Software Developer}{Working Student}
+\item Designed and implemented the python programming interface for the Celonis Business Intelligence Cloud Platform. (Currently used in production)
+\item Developed a data pushing pipeline to programmatically analyze event data.
+\end{rSubsection}
+
+\begin{rSubsection}{Celonis, Munich}{October 2017 - October 2018}{Data Analyst}{Working Student}
+\item Integrated custom data pools
+\item Developed business analyses and gave data science workshops
+\item Developed tools to automate and administrate the Celonis Process Mining Platform
+\end{rSubsection}
+
+\begin{rSubsection}{LMU Munich, Munich}{April 2016 - August 2016}{Tutor - Multi-Media-Programming}{Working Student}
+\item Created and presented material for the lecture
+\item Assisted the course participants during their programming assignments
+\end{rSubsection}
+
+\vfill
+\pagebreak
+
+\begin{rSubsection}{FeldM, Munich}{April 2015 - April 2016}{Java Software Developer}{Working Student}
+\item Developed a tool to monitor and evaluate different social media channels
+\item Extended an internal management tool to track working hours
+\end{rSubsection}
+
+\end{rSection}
+%----------------------------------------------------------------------------------------
+% Course Work
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Selected Relevant Coursework} \itemsep -3pt
+{\bf Data Processing and Analysis:}\\
+Deep Learning Algorithms, Machine Learning, Knowledge Discovery in Databases, Probability and Measure Theory, Big Data Management\\
+
+{\bf Human-Computer-Interaction:}\\
+Advanced topics on HCI, Intelligent User Interfaces, Psycho-physiological Computing, Human-Computer-Interaction, Sketching with Hardware, Development of interactive media systems\\
+
+{\bf General Software Development:}\\
+Data Structures and Algorithms, Software Architecture, Software Testing, Agile Development
+
+\end{rSection}
+
+\end{document}
