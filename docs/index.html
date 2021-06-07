@@ -12,6 +12,29 @@
     <title>
    Hai Dang - Doctoral HCI Researcher
     </title>
+    <style>
+      .cv-btn span {
+        cursor              : pointer;
+        display             : inline-block;
+        position            : relative;
+        transition          : 0.5s;
+      }
+      .cv-btn span:after {
+        content             : "»";
+        position            : absolute;
+        opacity             : 0;
+        top                 : 0;
+        right               : -20px;
+        transition          : 0.5s;
+      }
+      .cv-btn:hover span {
+        padding-right       : 25px;
+      }
+      .cv-btn:hover span:after {
+        opacity             : 1;
+        right               : 0;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark ps-md-4" style="font-size: 24px; background-color: #252525;">
@@ -31,12 +54,12 @@
               </a>
             </li>
             <li class="nav-item">
-              <a aria-label="Publications" class="nav-link" href="#publications">
+              <a aria-label="Publications" class="nav-link" href="index.html#publications">
                 Publications
               </a>
             </li>
             <li class="nav-item">
-              <a ariad-label="CV" class="nav-link" href="#">
+              <a ariad-label="CV" class="nav-link" href="cv.pdf">
                 CV
               </a>
             </li>
@@ -88,6 +111,11 @@
               and
               explorable.
             </p>
+            <a class="cv-btn btn btn-lg d-block" href="cv.pdf" style="width: 150px; background-color: #FA5F1A; color: #FDFDFD">
+              <span>
+                View CV
+              </span>
+            </a>
           </div>
         </div>
         <div class="col-12 col-md-4 d-flex align-items-center">
@@ -139,7 +167,7 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-center mb-4 pt-5 pb-5">
+      <div class="row justify-content-center mt-4">
         <div class="col-12">
           <h4 class="mb-4">
             Research Areas
@@ -163,8 +191,8 @@
           </ul>
         </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-12">
+      <div class="row justify-content-center mt-4">
+        <div class="col-12 pb-4">
           <h4 class="mb-5" id="publications">
             Publications
           </h4>
@@ -197,6 +225,32 @@
               </a>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-4">
+        <div class="col-12">
+          <h4 class="mb-3">
+            Theses
+          </h4>
+          <ul>
+            <li>
+              (BT'21) Niklas Makert - Continuous Interaction with Text Generation (Co-Advisor:
+              <a href="https://florianlehmann.de">
+                Florian Lehmann
+              </a>
+              )(Ongoing)
+            </li>
+            <li>
+              (MT'21) Lars Reisig - Into the unknown - Supporting the informed collaboration between Designers and AI Engineers in early innovation stages (Co-Advisor:
+              <a href="https://daniel-buschek.de">
+                Daniel Buschek
+              </a>
+              <a href="https://florianlehmann.de">
+                Florian Lehmann
+              </a>
+              )(Ongoing)
+            </li>
+          </ul>
         </div>
       </div>
     </div>
