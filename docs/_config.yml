@@ -1,17 +1,17 @@
 #-------------------------------
 # General Site Settings
-title: Atega
+title: hdang
 logo: # You can add own logo. For example '/images/logo.png'.
-description: Atega - Creative Personal Blog Theme for Jekyll
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: Hai Dang - Personal Blog
+baseurl: "/404.html" # the subpath of your site, e.g. /blog
+url: "www.hdang.de" # the base hostname & protocol for your site, e.g. http://example.com
 blog-theme: light # By default, Atega theme uses a 'light' color scheme, to change the color scheme to dark use 'dark' value (_includes/color-scheme)
 
 
 #-------------------------------
 # Author Settings
 author:
-  name: Leo Hawkins
+  name: Hai Dang
   image: '/images/01.jpg'
 
 
