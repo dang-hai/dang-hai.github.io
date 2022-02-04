@@ -1,1 +1,0 @@
-https://www.linkedin.com/posts/mjaeugster_artificialintelligence-machinelearning-datascience-activity-6857304635741347840-qBHh
