@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Paper Accepted at ACM CHI'21 - GestureMap Supporting Visual Analytics and Quantitative Analysis of Motion Elicitation Data by Learning 2D Embeddings 
+title: "Paper Accepted at ACM CHI'21 - GestureMap Supporting Visual Analytics and Quantitative Analysis of Motion Elicitation Data by Learning 2D Embeddings"
 date: 2021-02-01 15:01:35 +0300
 image: '/images/GestureMap_Concept_Teaser.png'
-tags: [Computational Interaction, Gesture Data, Dataset]
+tags: [Computational-Interaction, Gesture-Data, Dataset]
 ---
 
 <img src="./static/Teaser.png" alt="Teaser figure" width="1024px"/>
