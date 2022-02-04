@@ -21,8 +21,8 @@ hero:
   hero__title: Hi, I'm <span class="hero__name">Hai Dang</span>.
   hero__job: HCI Researcher
   hero__description: I'm a second year Ph.D candidate at the University of Bayreuth. I build interactive co-creative systems that leverage generative models to create high-fidelity content.
-  hero__button__text: About Me
-  hero__button__link: '/about'
+  hero__button__text: Resume 
+  hero__button__link: '/assets/resume.pdf'
   hero__image: '/images/Profile_Hai_small.png'
 
 
