@@ -3,7 +3,7 @@ layout: post
 title: First Round Accept at ACM CHI'22 - GANSlider
 date: 2022-02-01 15:01:35 +0300
 image: '/images/chi22_logo.jpeg'
-post_url: 2021-02-01-ganslider
+post_url: 2022-02-01-ganslider
 ---
 
 I'm happy to announce that my second full paper was accepted for the CHI'22 conference during the first review round. Of course, acceptances and rejections (in-part) depend on being lucky with the reviewers, so I'm just glad that this time it worked to be in my favor. In my newest work, I take a close look at the slider interface for the control of generative models for images. While we see an increasing interest in generative tools, we still lack an in-depth understanding of how users perceive and interact with these user interfaces. 
