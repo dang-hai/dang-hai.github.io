@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
+  <title>First Round Accept at ACM CHI'22 - GANSlider</title>
   <meta name='description' content='Hai Dang - Personal Blog'>
 
-  <link rel="canonical" href="http://localhost:4000/about/">
+  <link rel="canonical" href="http://localhost:4000/ganslider">
   <link rel="alternate" type="application/rss+xml" title="hdang" href="/feed.xml">
 
   <!-- Fonts -->
@@ -146,14 +146,21 @@
       <div class="wrapper-page">
         <!-- begin hero -->
 
-<section class="hero hero--page">
+<section class="hero hero--post">
   <div class="container">
     <div class="row">
       <div class="col col-12">
         <div class="hero__inner">
           <div class="hero__left">
             
-            <h1 class="hero__title">About</h1>
+
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2022-02-01T13:01:35+01:00">01 Feb 2022</time></span>
+              
+            </div>
+
+            <h1 class="hero__title">First Round Accept at ACM CHI'22 - GANSlider</h1>
+            <a href="/about/" class="article__author-link"><span>By</span> Hai Dang</a>
 
             
           </div>
@@ -162,7 +169,7 @@
 
             
             <div class="hero__image">
-              <img class="lazy" data-src="/images/Profile_Hai_small.png" alt="About">
+              <img class="lazy" data-src="/images/chi22_logo.jpeg" alt="First Round Accept at ACM CHI'22 - GANSlider">
             </div>
 
             
@@ -175,29 +182,116 @@
 </section>
 <!-- end hero -->
 
-<!-- begin page -->
+<!-- begin post -->
 <div class="container">
-  <article class="page animate">
+  <article class="post animate">
 
-    <div class="page__content">
-      <p>My name is Hai Dang. I’m a second year a Ph.D. student in the <a href="https://www.hciai.uni-bayreuth.de/en/index.html">HCI+AI research group</a> under the supervision of <a href="www.daniel-buschek.de">Dr. Daniel Buschek</a>. My roots are Vietnamese, but I was born and raised in Germany. I grew up in Munich where I did my Bachelor in Media Informatics and Master in Computer Science at the <a href="www.uni-muenchen.de">LMU Munich</a>.</p>
+    <div class="post__content">
+      <p>I’m happy to announce that my second full paper was accepted for the CHI’22 conference during the first review round. Of course, acceptances and rejections (in-part) depend on being lucky with the reviewers, so I’m just glad that this time it worked to be in my favor. In my newest work, I take a close look at the slider interface for the control of generative models for images. While we see an increasing interest in generative tools, we still lack an in-depth understanding of how users perceive and interact with these user interfaces.</p>
 
-<p>My general research interests lie at the intersection of <strong>Human-Computer-Interaction</strong> and <strong>Applied Machine Learning</strong>. In my research, I analyse generative systems and how users can interactively use them to create more expressive digitial content. These so-called, co-creative systems envision a close Human AI relationship where both parties intelligently contribute to the final outcome. They enable users to create media with high fidelity by leveraging on a vast amount of training data. My recent work - <a href="2021-02-01-ganslider">GANSlider</a> - has looked on how user interfaces for the control of gerneative models for images (e.g. GAN) can be improved. In another project I have built <a href="/gesturemap">GestureMap</a>, an interactie tool that uses features learned by a generative model trained on motion data, to analyse user gestures for the of control interactive systems.</p>
+<p>The slider interface has been typically employed to allow users to adjust the underlying generative model, for example, to control semantic facial expressions such as smiling or frowning when editing a picture of a human face. However, the interaction with such a slider interfaces for controlling generative models for images has not been the focus of a user study from an HCI perspective yet. In particular we study how variations of the slider interface influence users interaction strategy. Using our prototype we logged each user interaction with the slider interface and conducted a detailed analysis of the observed interaction patterns. From our results we draw design suggestions for future systems that use slider interfaces for the control of generative models. Have a look at the paper linked below if you are interested in further details.</p>
 
-<p>As part of my research work, I also conduct detailed <strong>users studies</strong> and apply <strong>qualitative as well as quantititave analyses</strong> to better understand the current opportunities and limitations of these still imperfect interactive AI systems. I am further interested in explainable and fair AI. My work is published at top-tier venues including CHI and IUI.</p>
+<p><img src="/images/ganslider_teaser.png" alt="Teaser figure" width="1024px" /></p>
 
-<p>Currently, I am also leading the educational efforts at <a href="https://tum-ai.com">TUM.ai</a> were we teach students from different disciplines foundational AI knowledge. By providing everyone with a basic understanding and a common AI vocabulary this program aims to pave the way for more effective communication and hopefully enable aspiring students to pursue their AI projects in an interdisciplinary setting.</p>
+<p><strong>GANSlider: How Users Control Generative Models for Images using Multiple Sliders with and without Feedforward Information</strong><br />
+Hai Dang<sup>1</sup>, Lukas Mecke<sup>2,3</sup>, Daniel Buschek<sup>1</sup><br />
+<sup>1</sup>University of Bayreuth, <sup>2</sup>Bundeswehr University Munich, <sup>3</sup>LMU Munich<br /></p>
 
-<p>Feel free to <a href="/contac">reach out</a> me if you want to collaborate!</p>
+<p align="justify"><b>Paper Link:</b> 
+<a href="https://arxiv.org/pdf/2202.00965.pdf">Read Paper</a>
 
-<p>Email:
-firstname[dot]lastname[at]uni-bayreuth.de</p>
+
+<p align="justify"><b>Abstract:</b> <i>We investigate how multiple sliders with and without feedforward visualizations influence users' control of generative models. In an online study (N=138), we collected a dataset of people interacting with a generative adversarial network (\textit{StyleGAN2}) in an image reconstruction task. We found that more control dimensions (sliders) significantly increase task difficulty and user actions. Visual feedforward partly mitigates this by enabling more goal-directed interaction. However, we found no evidence of faster or more accurate task performance. This indicates a tradeoff between feedforward detail and implied cognitive costs, such as attention. Moreover, we found that visualizations alone are not always sufficient for users to understand individual control dimensions. Our study quantifies fundamental UI design factors and resulting interaction behavior in this context, revealing opportunities for improvement in the UI design for interactive applications of generative models. We close by discussing design directions and further aspects.</i></p>
+
+<p align="justify"><b>Video:</b> 
+TBA
+</p></p>
 
     </div>
 
+    <div class="post__share">
+  <ul class="share__list list-reset">
+    <li class="share__item">
+      <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/ganslider"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+    </li>
+
+    <li class="share__item">
+      <a class="share__link share__twitter" href="https://twitter.com/intent/tweet?text=First%20Round%20Accept%20at%20ACM%20CHI'22%20-%20GANSlider&url=http://localhost:4000/ganslider"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+    </li>
+
+    <li class="share__item">
+      <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/ganslider&title=First%20Round%20Accept%20at%20ACM%20CHI'22%20-%20GANSlider&summary=&source=hdang"
+      onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+    </li>
+
+    <li class="share__item">
+      <a class="share__link share__pinterest" href="http://pinterest.com/pin/create/button/?url=http://localhost:4000/ganslider&amp;media=http://localhost:4000/images/chi22_logo.jpeg&amp;description=First%20Round%20Accept%20at%20ACM%20CHI'22%20-%20GANSlider"
+      onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest"
+      rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+    </li>
+  </ul>
+</div>
+
+    <div class="post__navigation">
+  
+  <a class="post__prev" href="/gesturemap">
+    <div class="prev__image">
+      <img class="lazy" data-src="/images/chi21_logo.png" alt="First Round Accept at ACM CHI'22 - GANSlider">
+    </div>
+    <div class="prev__box">
+      <span class="post__nav post__nav__prev">Older post</span>
+      <h2 class="post__nav__title">Paper Accepted at ACM CHI'21 - GestureMap</h2>
+    </div>
+  </a>
+  
+
+  
+</div>
+
+     <!-- begin comments -->
+<div id="disqus_thread" class="post__comments">
+  <div id="disqus_empty"></div>
+</div>
+
+<script>
+  function load_disqus() {
+    var disqus_shortname = 'hdang',
+      is_disqus_empty = document.getElementById('disqus_empty'),
+      disqus_target = document.getElementById('disqus_thread'),
+      disqus_embed = document.createElement('script'),
+      disqus_hook = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+
+    if (disqus_target && is_disqus_empty) {
+      disqus_embed.type = 'text/javascript';
+      disqus_embed.async = true;
+      disqus_embed.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      disqus_hook.appendChild(disqus_embed);
+      is_disqus_empty.remove();
+    }
+  }
+
+  window.addEventListener('scroll', function (e) {
+    var currentScroll = document.scrollingElement.scrollTop;
+    var disqus_target = document.getElementById('disqus_thread');
+
+    if (disqus_target && (currentScroll > disqus_target.getBoundingClientRect().top - 150)) {
+      load_disqus('disqus_shortname');
+    }
+  }, false);
+
+</script>
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<!-- end comments --> 
+
   </article>
 </div>
-<!-- end page -->
+<!-- end post -->
       </div>
       <!-- end wrapper-page -->
     </main>

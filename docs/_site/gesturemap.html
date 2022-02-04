@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
+  <title>Paper Accepted at ACM CHI'21 - GestureMap</title>
   <meta name='description' content='Hai Dang - Personal Blog'>
 
-  <link rel="canonical" href="http://localhost:4000/about/">
+  <link rel="canonical" href="http://localhost:4000/gesturemap">
   <link rel="alternate" type="application/rss+xml" title="hdang" href="/feed.xml">
 
   <!-- Fonts -->
@@ -146,14 +146,21 @@
       <div class="wrapper-page">
         <!-- begin hero -->
 
-<section class="hero hero--page">
+<section class="hero hero--post">
   <div class="container">
     <div class="row">
       <div class="col col-12">
         <div class="hero__inner">
           <div class="hero__left">
             
-            <h1 class="hero__title">About</h1>
+
+            <div class="article__meta">
+              <span class="article__date"><time datetime="2021-02-01T13:01:35+01:00">01 Feb 2021</time></span>
+              
+            </div>
+
+            <h1 class="hero__title">Paper Accepted at ACM CHI'21 - GestureMap</h1>
+            <a href="/about/" class="article__author-link"><span>By</span> Hai Dang</a>
 
             
           </div>
@@ -162,7 +169,7 @@
 
             
             <div class="hero__image">
-              <img class="lazy" data-src="/images/Profile_Hai_small.png" alt="About">
+              <img class="lazy" data-src="/images/chi21_logo.png" alt="Paper Accepted at ACM CHI'21 - GestureMap">
             </div>
 
             
@@ -175,29 +182,113 @@
 </section>
 <!-- end hero -->
 
-<!-- begin page -->
+<!-- begin post -->
 <div class="container">
-  <article class="page animate">
+  <article class="post animate">
 
-    <div class="page__content">
-      <p>My name is Hai Dang. I’m a second year a Ph.D. student in the <a href="https://www.hciai.uni-bayreuth.de/en/index.html">HCI+AI research group</a> under the supervision of <a href="www.daniel-buschek.de">Dr. Daniel Buschek</a>. My roots are Vietnamese, but I was born and raised in Germany. I grew up in Munich where I did my Bachelor in Media Informatics and Master in Computer Science at the <a href="www.uni-muenchen.de">LMU Munich</a>.</p>
+    <div class="post__content">
+      <p>My first paper has been accepted to the ACM CHI’21 conference. Although this work was an extension of my master thesis, it still required many iterations and additions before it was ready to be submitted to the conference. I spent many weeks working on this project and I’m incredibly relieved to see it finally being featured at CHI’21 - one of the biggest conference for human-computer-interaction. In this work I’ve built an interactive tool to analyse behavioral gesture data for the control of interactive systems. The key feature in this tool is the underlying generative model which I used to automatically learn feature representations for the 3D depth sensor motion training data. I’ve then used these representations to build a map displaying all the behavior captured in the underlying dataset. The tool also allows users to simulate new “unseen” behavior by leveraging the generative model to create new motion data points. Feel free to checkout the paper linked below for further details.</p>
 
-<p>My general research interests lie at the intersection of <strong>Human-Computer-Interaction</strong> and <strong>Applied Machine Learning</strong>. In my research, I analyse generative systems and how users can interactively use them to create more expressive digitial content. These so-called, co-creative systems envision a close Human AI relationship where both parties intelligently contribute to the final outcome. They enable users to create media with high fidelity by leveraging on a vast amount of training data. My recent work - <a href="2021-02-01-ganslider">GANSlider</a> - has looked on how user interfaces for the control of gerneative models for images (e.g. GAN) can be improved. In another project I have built <a href="/gesturemap">GestureMap</a>, an interactie tool that uses features learned by a generative model trained on motion data, to analyse user gestures for the of control interactive systems.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IWwotWgsBFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
-<p>As part of my research work, I also conduct detailed <strong>users studies</strong> and apply <strong>qualitative as well as quantititave analyses</strong> to better understand the current opportunities and limitations of these still imperfect interactive AI systems. I am further interested in explainable and fair AI. My work is published at top-tier venues including CHI and IUI.</p>
+<p><img src="/images/gesturemap_teaser.png" alt="Teaser figure" width="1024px" /></p>
 
-<p>Currently, I am also leading the educational efforts at <a href="https://tum-ai.com">TUM.ai</a> were we teach students from different disciplines foundational AI knowledge. By providing everyone with a basic understanding and a common AI vocabulary this program aims to pave the way for more effective communication and hopefully enable aspiring students to pursue their AI projects in an interdisciplinary setting.</p>
+<p><strong>GestureMap: Supporting Visual Analytics and Quantitative Analysis of Motion Elicitation Data by Learning 2D Embedding</strong><br />
+Hai Dang<sup>1</sup>, Daniel Buschek<sup>1</sup><br />
+<sup>1</sup>University of Bayreuth<br /></p>
 
-<p>Feel free to <a href="/contac">reach out</a> me if you want to collaborate!</p>
+<p><a href="https://arxiv.org/pdf/2103.00912.pdf"><strong>Read Paper</strong></a></p>
 
-<p>Email:
-firstname[dot]lastname[at]uni-bayreuth.de</p>
+<p align="justify"><b>Abstract:</b> <i>This paper presents GestureMap, a visual analytics tool for gesture elicitation which directly visualises the space of gestures. Con- cretely, a Variational Autoencoder embeds gestures recorded as 3D skeletons on an interactive 2D map. GestureMap further integrates three computational capabilities to connect exploration to quan- titative measures: Leveraging DTW Barycenter Averaging (DBA), we compute average gestures to 1) represent gesture groups at a glance; 2) compute a new consensus measure (variance around average gesture); and 3) cluster gestures with k-means. We evaluate GestureMap and its concepts with eight experts and an in-depth analysis of published data. Our findings show how GestureMap facilitates exploring large datasets and helps researchers to gain a visual understanding of elicited gesture spaces. It further opens new directions, such as comparing elicitations across studies. We discuss implications for elicitation studies and research, and opportunities to extend our approach to additional tasks in gesture elicitation.
+</i></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DgIRlwZhCVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
     </div>
 
+    <div class="post__share">
+  <ul class="share__list list-reset">
+    <li class="share__item">
+      <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/gesturemap"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+    </li>
+
+    <li class="share__item">
+      <a class="share__link share__twitter" href="https://twitter.com/intent/tweet?text=Paper%20Accepted%20at%20ACM%20CHI'21%20-%20GestureMap&url=http://localhost:4000/gesturemap"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+    </li>
+
+    <li class="share__item">
+      <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/gesturemap&title=Paper%20Accepted%20at%20ACM%20CHI'21%20-%20GestureMap&summary=&source=hdang"
+      onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+    </li>
+
+    <li class="share__item">
+      <a class="share__link share__pinterest" href="http://pinterest.com/pin/create/button/?url=http://localhost:4000/gesturemap&amp;media=http://localhost:4000/images/chi21_logo.png&amp;description=Paper%20Accepted%20at%20ACM%20CHI'21%20-%20GestureMap"
+      onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest"
+      rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+    </li>
+  </ul>
+</div>
+
+    <div class="post__navigation">
+  
+
+  
+  <a class="post__next" href="/ganslider">
+    <div class="next__box">
+      <span class="post__nav post__nav__next">Newer post</span>
+      <h2 class="post__nav__title">First Round Accept at ACM CHI'22 - GANSlider</h2>
+    </div>
+    <div class="next__image">
+      <img class="lazy" data-src="/images/chi22_logo.jpeg" alt="Paper Accepted at ACM CHI'21 - GestureMap">
+    </div>
+  </a>
+  
+</div>
+
+     <!-- begin comments -->
+<div id="disqus_thread" class="post__comments">
+  <div id="disqus_empty"></div>
+</div>
+
+<script>
+  function load_disqus() {
+    var disqus_shortname = 'hdang',
+      is_disqus_empty = document.getElementById('disqus_empty'),
+      disqus_target = document.getElementById('disqus_thread'),
+      disqus_embed = document.createElement('script'),
+      disqus_hook = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+
+    if (disqus_target && is_disqus_empty) {
+      disqus_embed.type = 'text/javascript';
+      disqus_embed.async = true;
+      disqus_embed.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      disqus_hook.appendChild(disqus_embed);
+      is_disqus_empty.remove();
+    }
+  }
+
+  window.addEventListener('scroll', function (e) {
+    var currentScroll = document.scrollingElement.scrollTop;
+    var disqus_target = document.getElementById('disqus_thread');
+
+    if (disqus_target && (currentScroll > disqus_target.getBoundingClientRect().top - 150)) {
+      load_disqus('disqus_shortname');
+    }
+  }, false);
+
+</script>
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<!-- end comments --> 
+
   </article>
 </div>
-<!-- end page -->
+<!-- end post -->
       </div>
       <!-- end wrapper-page -->
     </main>
