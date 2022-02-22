@@ -22,7 +22,7 @@ hero:
   hero__job: HCI Researcher
   hero__description: I'm a second year Ph.D student at the University of Bayreuth. I build interactive co-creative systems that leverage generative models to create high-fidelity content.
   hero__button__text: Resume 
-  hero__button__link: '/assets/resume.pdf'
+  hero__button__link: 'https://docs.google.com/document/d/121X9u9feNzVXp5NPArzQlc3tzRxee_J0mTL-9EfJLUs/edit?usp=sharing'
   hero__image: '/images/Profile_Hai_small.png'
 
 
