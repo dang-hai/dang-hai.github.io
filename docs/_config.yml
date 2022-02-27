@@ -39,7 +39,8 @@ mailchimp__button__text: Subscribe # Add your button text
 contact:
   slug: f/xgerjyjp
   email: hai.dang@uni-bayreuth.de # Add your email for contant form
-  description:  Feel free to reach out to me. # Add a description of your form
+  description: Please feel free to get in touch with me if you want to know more about my research and work experience or want to talk about a collaboration. Looking forward to having a chat with you! # Add a description of your form
+  title: Information
 
 # NOTE
 # Atega comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want.

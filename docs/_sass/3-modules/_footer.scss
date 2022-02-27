@@ -215,6 +215,25 @@
   }
 }
 
+/* Contact */
+.contact {
+  position: relative;
+}
+
+.contact_item {
+  font-size: 15px;
+  line-height: 22px;
+
+  a:link {
+    color:  $text-color-alt;
+  };
+
+  a:visited {
+    color:  $text-color-alt;
+  };
+  
+}
+
 /* Copyright */
 .copyright {
   padding: 0 0 30px;
