@@ -2,7 +2,7 @@
 layout: post
 title: ACM CHI'22 - GANSlider
 date: 2022-02-01 15:01:35 +0300
-image: '/images/ganslider_thumbnail.png'
+image: '/images/reconstructions.gif'
 post_url: 2022-02-01-ganslider
 ---
 
@@ -10,15 +10,13 @@ post_url: 2022-02-01-ganslider
 Hai Dang<sup>1</sup>, Lukas Mecke<sup>2,3</sup>, Daniel Buschek<sup>1</sup><br>
 <sup>1</sup>University of Bayreuth, <sup>2</sup>Bundeswehr University Munich, <sup>3</sup>LMU Munich<br>
 
-<p align="justify"><b>Paper Link:</b> 
+<p><b>Paper Link:</b></p> 
 <a href="https://arxiv.org/pdf/2202.00965.pdf">Arxiv</a>, 
 <a href="https://dl.acm.org/doi/abs/10.1145/3491102.3502141">ACM Library</a>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uhQPxD1tyf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I am happy to announce that my second full paper was accepted for CHI'22 in New Orleans. While there is an increasing interest in generative tools, we still lack an in-depth understanding of how users perceive and interact with them. 
-
-<img src="/images/reconstructions.gif" alt="Reconstructions" width="1024px"/>
 
 Today's research and commercial applications [1] often provide a slider interface to control generative models. Each slider therein manipulates a particular attribute of the image, for example, to control semantic facial expressions such as smiling or frowning or changing the hair color (Figure 1). 
 
