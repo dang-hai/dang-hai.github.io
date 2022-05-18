@@ -20,11 +20,11 @@ I am happy to announce that my second full paper was accepted for CHI'22 in New 
 
 Today's research and commercial applications [1] often provide a slider interface to control generative models. Each slider therein manipulates a particular attribute of the image, for example, to control semantic facial expressions such as smiling or frowning or changing the hair color (Figure 1). 
 
-<img src="/images/ganspace.jpeg" alt="slider interface" width="1024px"/>
+<img src="/images/ganspace.jpeg" alt="slider interface" width="720px"/>
 
 In many situations, clear dimensions (i.e., smiling or hair color) are not available or only so with additional optimization effort. More often, the sliders may affect multiple aspects of the image simultaneously. In these situations, it is up to the user to make sense of and interpret the individual control dimensions (Figure 2). 
 
-<img src="/images/ganspace_unknown.png" alt="Teaser figure" width="1024px"/>
+<img src="/images/ganspace_unknown.png" alt="Teaser figure" width="720px"/>
 
 Instead,  we introduced Filmstrip-like sliders (Figure 3) to support users to make more informed interactions by showing previews of the different states along each control dimension. Participants in our user study were asked to reconstruct a target image by manipulating a set of sliders. One of the findings demonstrated that users made more unnecessary interactions when using regular sliders without the preview. Furthermore, in the absence of any feedback on the individual control dimensions, the only way for users to learn about individual sliders is to interact with them, adding to the total number of unnecessary interactions. On the other hand, the Filmstrip slider allowed users to make more strategic interaction decisions. Please refer to our paper if you want to know more about how we quantified and evaluated our user study.
 
