@@ -1,0 +1,105 @@
+---
+layout: default
+---
+
+{% include hero.html %}
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+
+      <div class="row">
+        <div class="col col-6 col-d-12">
+          <p>
+            I'm a third year PhD student at University of Bayreuth conducting
+            research on human-AI collaboration for creative tasks. I'm part of the <a
+              href="https://www.hciai.uni-bayreuth.de/en/index.html">HCI+AI
+              group</a> with <a href="http://www.daniel-buschek.de">Dr. Daniel
+              Buschek</a>. Previously, I received an M.Sc in Computer Science
+            and a
+            B.Sc. in Human-Computer-Interaction from the <a
+              href="https://www.lmu.de/de/index.html">LMU Munich</a>. During my
+            undergraduate studies, I focused on user interaction research and
+            machine learning to analyze and model <a href="gesturemap">human
+              behavior</a>.
+          </p>
+          <p>
+            Now, I apply user research methods to understand how users interact
+            with
+            AI to create digital artifacts. As part of my research, I build
+            interactive systems to support people explore and control the
+            generative
+            capabilities of new AI systems. My research is funded by the
+            Bavarian
+            State Ministry of Science and the Arts and coordinated by the <a
+              href="https://www.bidt.digital/forschung/nachwuchsforschungsgruppen/">Bavarian
+              Research Institute for Digital Transformation (bidt)</a>.
+          </p>
+
+        </div>
+        <div class="col col-2 col-d-4 push-1 push-d-0">
+          <p>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Universität_Bayreuth.svg/2880px-Universität_Bayreuth.svg.png" />
+          </p>
+          <img src="assets/lmu_logo.jpeg" />
+          </p>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Bayerisches_Forschungsinstitut_für_Digitale_Transformation_logo.svg/2880px-Bayerisches_Forschungsinstitut_für_Digitale_Transformation_logo.svg.png" />
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+        <div class="col col-8 col-d-12">
+          <h4>📰 News</h4>
+
+          <ul>
+            <li>[Oct 22] I'm attending UIST'22 in Bend, Oregon USA to present
+              our <a href="posts/beyond-text-generation">new paper</a>.</li>
+            <li>[Jun 22] I will be in Saarbrücken, Germany attending the <a
+                href="https://cixschool2022.cs.uni-saarland.de">6th CIX Summer
+                School</a>.</li>
+            <li>[Jun 22] Organised the first AI Bootcamp week for TUM.ai with
+              60+ participants.</li>
+            <li>[May 22] Travelling to CHI'22 New Orleans to present <a
+                href="posts/ganslider">GANSlider</a> and support the conference
+              as a student volunteer.</li>
+            <li>[Apr 22] Attended the Spring International Doctoral Consortium
+              at Fraueninsel</li>
+            <li>[Mar 22] Co-lead the Web chair for IUI 22</li>
+            <li>[Oct 21] Attended the Fall International Doctoral Consortium in
+              Venice</li>
+            <li>[May 21] Presented GestureMap at the virtual CHI 21 conference
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contaniner__inner animate">
+        <h4>📄 Publications</h4>
+        {% for post in site.posts %}
+        {% assign currentdate = post.date | date: "%Y" %}
+        {% if currentdate != date %}
+        {% unless forloop.first %}
+      </div>{% endunless %}
+      <h3 id="y{{post.date | date: " %Y"}}">{{ currentdate }}</h3>
+      <div class="row">
+        {% assign date = currentdate %}
+        {% endif %}
+        {% include publication-content.html %}
+        {% if forloop.last %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+
+
+</div>
+</div>
+
+{% include pagination.html %}
