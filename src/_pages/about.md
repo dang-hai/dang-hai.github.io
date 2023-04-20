@@ -14,13 +14,11 @@ table th:nth-of-type(2) {
 }
 </style>
 
-My name is Hai Dang. I'm a second year a Ph.D. student in the <a href="https://www.hciai.uni-bayreuth.de/en/index.html">HCI+AI research group</a> at the University of Bayreuth under the supervision of <a href="http://www.daniel-buschek.de/intro">Dr. Daniel Buschek</a>. I grew up in Munich where I did my Bachelor in Media Informatics and Master in Computer Science at the <a href="https://www.lmu.de/de/index.html">LMU Munich</a>.
+Hi, I'm Hai Dang, a third-year Ph.D. student in the HCI+AI research group at the University of Bayreuth, where I'm supervised by [Prof. Daniel Buschek](http://www.daniel-buschek.de/intro). Before starting my Ph.D., I obtained my B.Sc. in Media Informatics and M.Sc. in Computer Science from [LMU Munich](https://www.lmu.de/de/index.html). Additionally, I had the opportunity to spend a year studying at [Yonsei University](https://www.yonsei.ac.kr) in South Korea during my undergraduate studies.
 
-My reserach revolves around **Human-Computer-Interaction** and **Applied Machine Learning**. I build interactive systems and conduct in-depth **users studies** using **qualitative and quantitative UX methods** to understand and improve how users control generative models. My work has been published at premier venues in the field of Human-Computer-Interaction including CHI and IUI.
+My research focuses on Human-Computer Interaction (HCI) and Applied Machine Learning. Specifically, I develop interactive systems and conduct comprehensive user studies using both qualitative and quantitative UX methods to enhance users' interactions with generative systems for creative tasks. My work has been featured in prestigious venues in the field of Human-Computer Interaction, such as CHI, UIST, and IUI.
 
-Through my **co-creative systems** I enable users to create more expressive digital content by leveraging vast amount of training data. My previous project, - <a href="{% post_url 2022-02-01-ganslider %}">GANSlider</a> - has looked into user interfaces for the control of generative models for images (e.g. GAN) and proposes improvements by visually aiding the users. <a href="{% post_url 2021-02-01-gesturemap %}">GestureMap</a>, on the other hand, is an interactive tool that uses a deep generative model trained on motion data, to analyse user gestures for the control of interactive systems.
-
-Currently, I investigate **writing support tools** that use natural language processing (**NLP**) and large language models (**LLM**) to help users in their (creative) writing process. **Prompt engineering** research has already shown promising results in the optimization of textual prompts for LLMs, however, for many non-ml users, prompting is still a trial and error process. I view the prompt writing paradigm from a HCI perspective and conceptualize new interactive tools to help users write better textual prompts.
+Aside from
 
 | | |
 |--------------------|-|
@@ -61,6 +59,14 @@ Coursework: Algorithms, Data Structures, Human Computer Interaction, Media Techn
 ---
 
 ## Professional Experience
+
+**Research Scientist - (Incomming) Ph.D. Internship**<br>
+*06/23-09/23, Meta Reality Labs Research, Toronto*<br>
+Working with [Ben Lafreniere](http://benlafreniere.ca) on multi-modal input for VR.
+
+**Research Scientist - Ph.D. Internship**<br>
+*11/22-03/23, Autodesk Research, Toronto*<br>
+Designed and implemented an interactive tool to support fictional world building. Worked with [Frederik Brudy](https://fbrudy.net) and [Fraser Anderson](http://fraseranderson.ca).
 
 **Doctoral HCI Researcher**<br>
 *Estimated 09/2023, University of Bayreuth, Germany*<br>
@@ -119,17 +125,50 @@ Undergraduate  level course, with 116 students (Instructor: Prof. Dr. Heinrich H
 
 ---
 
-## Publications
+## Selected Publications
 
-[P] **Hai Dang**, Lukas Mecke, Daniel Buschek. 2022. GANSlider: How Users Control Generative Models for Images using Multiple Sliders with and without Feedforward Information. (to appear CHI’22). SIGCHI, ACM, New York, USA.
+[P] **Hai Dang**, Sven Goller, Folrian Lehman, Daniel Buschek. 2023. Choice Over Control: How Users Write with Large Language Models using Diegetic and Non-Diegetic Prompting. (CHI’23). SIGCHI, ACM, New York, USA. [https://dl.acm.org/doi/10.1145/3544548.3580969](https://dl.acm.org/doi/10.1145/3544548.3580969)
 
-[P] **Hai Dang**, Daniel Buschek. 2021. GestureMap: Supporting Visual Analytics and Quantitative Analysis of Motion Elicitation Data by Learning 2D Embeddings. Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (CHI’21). Association for Computing Machinery, New York, NY, USA, Article 317, 1–12.
+[P] **Hai Dang**, Karim Benharrak, Florian Lehmann, Daniel Buschek. 2022. Beyond Text Generation: Supporting Writers with Continuous Automatic Text Summaries. (to appear UIST’22). SIGCHI, ACM, New York, USA. [https://doi.org/10.1145/3526113.3545672](https://doi.org/10.1145/3526113.3545672)
 
-[WP] Daniel Buschek, Lukas Mecke, Florian Lehmann, **Hai Dang**. 2021. Nine Potential Pitfalls when Designing Human-AI Co-Creative Systems. In Proceedings of the ACM IUI 2021 Workshops, April 13-17, 2021. 
+[P] **Hai Dang**, Lukas Mecke, Daniel Buschek. 2022. GANSlider: How Users Control Generative Models for Images using Multiple Sliders with and without Feedforward Information. (CHI’22). SIGCHI, ACM, New York, USA. [https://dl.acm.org/doi/10.1145/3491102.3502141] (https://dl.acm.org/doi/10.1145/3491102.3502141)
+
+[P] **Hai Dang**, Daniel Buschek. 2021. GestureMap: Supporting Visual Analytics and Quantitative Analysis of Motion Elicitation Data by Learning 2D Embeddings. Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (CHI’21). SIGCHI, ACM, New York, USA. [https://dl.acm.org/doi/10.1145/3411764.3445765](https://dl.acm.org/doi/10.1145/3411764.3445765)
+
+[WP] Daniel Buschek, Lukas Mecke, Florian Lehmann, **Hai Dang**. 2021. Nine Potential Pitfalls when Designing Human-AI Co-Creative Systems. In Proceedings of the ACM IUI 2021 Workshops, April 13-17, 2021. [https://arxiv.org/abs/2104.00358](https://arxiv.org/abs/2104.00358)
+
 
 ---
 
-## Selected Projects
+## Volunteering
+
+**Academic Student Volunteering**<br>
+*CHI'22, CHI'23, ACM Sigchi*
+Various organizational and operational tasks during an academic conference.
+
+**IUI Conference Web Chair**<br>
+*Feb 2021, IUI, ACM, Association for Computing Machinery*
+Built and maintained the official web page for the upcoming IUI’22 conference using HTML and CSS.
+
+**TUM.ai Education - Team Lead**<br>
+*11/2021-05/2022, TUM.ai*<br>
+Managed a cross-functional team of 12 to provide educational content and workshops about the applications of artificial intelligence in businesses and research. *Mentor since 06/2022-09/2022. Alumni since 10/2022*
+
+**TUM.ai Community Department**<br>
+*07/2021-10/2021, TUM.ai*<br>
+Organised social events and lead recruitment process.
+
+**LMU Buddy**<br>
+*10/2018-10/2019, LMU Munich*<br>
+Welcomed international exchange students and helped with bureaucratic issues.
+
+**Yonsei Mentors Club**<br>
+*08/2016-07/2017, Yonsei University*<br>
+Helped organising internation exchange student events.
+
+---
+
+## Other Projects
 
 **Search Engine For Digitalized Floor Plans**<br>
 *Fall 2021 - 48h Hackathon*<br>
@@ -157,30 +196,3 @@ Won the class competition for predicting power consumption of the LRZ computing 
 *Fall 2019 - Seminar LMU Munich*<br>
 Built an ensemble model for knowledge graph embedding models using the PyKeen framework.<br>
 (Instructor: Dr. Hayk Shoukourian)
-
----
-
-## Volunteering
-
-**TUM.ai Education Team Lead**<br>
-*since 11/2021, TUM.ai*<br>
-Managed a cross-functional team of 12 to provide educational content and workshops about the applications of artificial intelligence in businesses and research.
-
-**IUI Conference Web Chair**<br>
-*since Feb 2021, IUI, ACM, Association for Computing Machinery*
-Built and maintained the official web page for the upcoming IUI’22 conference using HTML and CSS.
-
-**TUM.ai Community Department**<br>
-*07/2021-10/2021, TUM.ai*<br>
-Organised social events and lead recruitment process.
-
-**LMU Buddy**<br>
-*10/2018-10/2019, LMU Munich*<br>
-Welcomed international exchange students and helped with bureaucratic issues.
-
-**Yonsei Mentors Club**<br>
-*08/2016-07/2017, Yonsei University*<br>
-Helped organising internation exchange student events.
-
-
-
