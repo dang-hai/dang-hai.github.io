@@ -1,5 +1,6 @@
 <script lang="ts">
   import { newsItems } from '$lib/data/news';
+  import { featuredResearch } from '$lib/data/research';
   
   let visibleItems = 5;
   
@@ -132,71 +133,27 @@
   <section class="expertise mb-12">
     <h2 class="text-2xl font-semibold mb-6">Featured Research</h2>
     <div class="grid grid-cols-1 gap-8">
-        <div class="project-card p-6 bg-gray-50 rounded-lg">
-            <h3 class="text-xl font-medium mb-3">AI Writing Assistance & Interaction Design</h3>
-            <p class="text-gray-700 mb-4">
-                Investigated interaction techniques for writing systems that use AI features, focusing on diegetic and non-diegetic prompting methodologies. Developed continuous text summarization systems to enhance writing workflows.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">LLMs</span>
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Text Generation</span>
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">HCI</span>
+        {#each featuredResearch as research}
+            <div class="project-card p-6 bg-gray-50 rounded-lg">
+                <h3 class="text-xl font-medium mb-3">{research.title}</h3>
+                <p class="text-gray-700 mb-4">
+                    {research.description}
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    {#each research.tags as tag}
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">{tag}</span>
+                    {/each}
+                </div>
+                <div class="text-sm text-gray-600 flex flex-col gap-2">
+                    {#each research.publications as pub}
+                        <a href={pub.url} class="text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener">
+                            {pub.title}
+                            <span class="text-gray-600 block mt-1">{pub.venue}</span>
+                        </a>
+                    {/each}
+                </div>
             </div>
-            <div class="text-sm text-gray-600 flex flex-col gap-2">
-                <a href="https://dl.acm.org/doi/10.1145/3544548.3580969" class="text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener">
-                    Choice Over Control: How Users Write with Large Language Models using Diegetic and Non-Diegetic Prompting
-                    <span class="text-gray-600 block mt-1">CHI 2023</span>
-                </a>
-                <a href="https://dl.acm.org/doi/10.1145/3526113.3545672" class="text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener">
-                    Beyond Text Generation: Supporting Writers with Continuous Automatic Text Summaries
-                    <span class="text-gray-600 block mt-1">UIST 2022</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="project-card p-6 bg-gray-50 rounded-lg">
-            <h3 class="text-xl font-medium mb-3">Generative AI Control Interfaces</h3>
-            <p class="text-gray-700 mb-4">
-                Investigated how users interact with and control generative AI models for images, including novel slider-based interfaces for GANs and multi-modal prompting for creative applications. Published interaction design guidelines on prompting techniques for human-AI co-creative systems.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Generative AI</span>
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Interface Design</span>
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">User Studies</span>
-            </div>
-            <div class="text-sm text-gray-600 flex flex-col gap-2">
-                <a href="https://dl.acm.org/doi/10.1145/3491102.3502141" class="text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener">
-                    GANSlider: How Users Control Generative Models for Images using Multiple Sliders with and without Feedforward Information
-                    <span class="text-gray-600 block mt-1">CHI 2022</span>
-                </a>
-                <a href="https://dl.acm.org/doi/10.1145/3586183.3606772" class="text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener">
-                    WorldSmith: Iterative and Expressive Prompting for World Building with a Generative AI
-                    <span class="text-gray-600 block mt-1">UIST 2023</span>
-                </a>
-                <a href="https://arxiv.org/abs/2209.01390" class="text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener">
-                    How to Prompt? Opportunities and Challenges of Zero- and Few-Shot Learning for Human-AI Interaction in Creative Applications of Generative Models
-                    <span class="text-gray-600 block mt-1">GenAICHI 2022</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="project-card p-6 bg-gray-50 rounded-lg">
-            <h3 class="text-xl font-medium mb-3">Interactive Data Analysis Tools</h3>
-            <p class="text-gray-700 mb-4">
-                Developed GestureMap, a visual analytics system that uses machine learning to support the analysis of motion elicitation data through learned 2D embeddings, enabling researchers to better understand and analyze gesture interfaces.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Visual Analytics</span>
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Machine Learning</span>
-                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Gesture Interaction</span>
-            </div>
-            <div class="text-sm text-gray-600 flex flex-col gap-2">
-                <a href="https://dl.acm.org/doi/10.1145/3411764.3445765" class="text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener">
-                    GestureMap: Supporting Visual Analytics and Quantitative Analysis of Motion Elicitation Data by Learning 2D Embeddings
-                    <span class="text-gray-600 block mt-1">CHI 2021</span>
-                </a>
-            </div>
-        </div>
+        {/each}
     </div>
   </section>
 </main>
