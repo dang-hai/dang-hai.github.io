@@ -1,11 +1,35 @@
 <script lang="ts">
   import { newsItems } from '$lib/data/news';
   import { featuredResearch } from '$lib/data/research';
+  import { fly } from 'svelte/transition';
   
   let visibleItems = 5;
+  let selectedTags: string[] = [];
   
+  // Filter research based on selected tags
+  $: filteredResearch = selectedTags.length > 0 
+    ? featuredResearch.filter(research => 
+        research.tags.some(tag => selectedTags.includes(tag)))
+    : featuredResearch;
+    
   function loadMore() {
     visibleItems += 5;
+  }
+  
+  function toggleTag(tag: string) {
+    selectedTags = selectedTags.includes(tag) 
+      ? selectedTags.filter(t => t !== tag)
+      : [...selectedTags, tag];
+  }
+  
+  async function copyToClipboard(text: string, el: HTMLElement) {
+    await navigator.clipboard.writeText(text);
+    
+    // Show feedback
+    el.innerHTML = '<i class="fas fa-check"></i>';
+    setTimeout(() => {
+      el.innerHTML = '<i class="fas fa-copy"></i>';
+    }, 2000);
   }
 </script>
 
@@ -17,7 +41,7 @@
       <img 
         src="/profile.jpeg" 
         alt="Hai Dang" 
-        class="w-48 h-48 rounded-full object-cover shadow-lg"
+        class="w-48 h-48 rounded-full object-cover shadow-lg float-animation"
       />
       
       <!-- Text Content -->
@@ -74,10 +98,10 @@
         <div class="mb-8">
             <h2 class="text-xl font-semibold mb-3">Research Interests</h2>
             <div class="flex flex-wrap gap-2">
-                <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg">Interactive NLP</span>
-                <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg">Human-AI Collaboration</span>
-                <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg">Creative Support Tools</span>
-                <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg">Human-Centered AI System Design</span>
+                <span class="interest-tag">Interactive NLP</span>
+                <span class="interest-tag">Human-AI Collaboration</span>
+                <span class="interest-tag">Creative Support Tools</span>
+                <span class="interest-tag">Human-Centered AI System Design</span>
             </div>
         </div>
 
@@ -132,9 +156,30 @@
 
   <section class="expertise mb-12">
     <h2 class="text-2xl font-semibold mb-6">Featured Research</h2>
+    
+    <!-- Filter Tags -->
+    <div class="flex flex-wrap gap-2 mb-6">
+        {#each [...new Set(featuredResearch.flatMap(r => r.tags))] as tag}
+            <button 
+                class="px-3 py-1 rounded-full text-sm transition-all duration-300"
+                class:bg-blue-600={selectedTags.includes(tag)}
+                class:text-white={selectedTags.includes(tag)}
+                class:bg-blue-100={!selectedTags.includes(tag)}
+                class:text-blue-800={!selectedTags.includes(tag)}
+                on:click={() => toggleTag(tag)}
+            >
+                {tag}
+            </button>
+        {/each}
+    </div>
+
+    <!-- Research Cards -->
     <div class="grid grid-cols-1 gap-8">
-        {#each featuredResearch as research}
-            <div class="project-card p-6 bg-gray-50 rounded-lg">
+        {#each filteredResearch as research, i (research.title)}
+            <div 
+                transition:fly="{{ y: 50, duration: 400, delay: i * 150 }}"
+                class="project-card p-6 bg-gray-50 rounded-lg transform hover:shadow-lg transition-all duration-300"
+            >
                 <h3 class="text-xl font-medium mb-3">{research.title}</h3>
                 <p class="text-gray-700 mb-4">
                     {research.description}
@@ -146,10 +191,22 @@
                 </div>
                 <div class="text-sm text-gray-600 flex flex-col gap-2">
                     {#each research.publications as pub}
-                        <a href={pub.url} class="text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener">
-                            {pub.title}
-                            <span class="text-gray-600 block mt-1">{pub.venue}</span>
-                        </a>
+                        <div class="group relative">
+                            <a href={pub.url} 
+                               class="text-blue-600 hover:text-blue-800 hover:underline" 
+                               target="_blank" 
+                               rel="noopener"
+                            >
+                                {pub.title}
+                                <span class="text-gray-600 block mt-1">{pub.venue}</span>
+                            </a>
+                            <button
+                                class="absolute right-0 top-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-2"
+                                on:click|stopPropagation={(e) => copyToClipboard(`${pub.title}. ${pub.venue}`, e.currentTarget)}
+                            >
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
                     {/each}
                 </div>
             </div>
@@ -163,17 +220,37 @@
     max-width: 1200px;
   }
   
-  .skill-card {
-    transition: transform 0.2s;
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
   }
   
-  .skill-card:hover {
+  .interest-tag {
+    @apply px-4 py-2 bg-blue-50 text-blue-700 rounded-lg;
+    transform: translateZ(0);
+    transition: transform 0.3s ease, rotate 0.3s ease;
+  }
+  
+  .interest-tag:hover {
+    transform: scale(1.1) rotate(2deg);
+  }
+  
+  .project-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .project-card:hover {
     transform: translateY(-2px);
   }
   
   /* If you want to customize the hover color, define your primary color */
   :root {
-    --color-primary: #0066cc; /* or your preferred color */
+    --color-primary: #0066cc;
   }
   
   .hover\:text-primary:hover {
