@@ -69,6 +69,17 @@
             I've recently co-founded a startup building advanced AI systems to understand complex construction documents. Our focus is on building intuitive human-AI workflows that augment industry experts, starting with intelligent quote processing. 
         </p>
 
+        <!-- Research Interests -->
+        <div class="mb-8">
+            <h2 class="text-xl font-semibold mb-3">Research Interests</h2>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg">Interactive NLP</span>
+                <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg">Human-AI Collaboration</span>
+                <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg">Creative Support Tools</span>
+                <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg">Human-Centered AI System Design</span>
+            </div>
+        </div>
+
         <!-- Interest Callout -->
         <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8 rounded-r">
           <div class="flex items-start">

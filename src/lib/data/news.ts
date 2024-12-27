@@ -8,7 +8,7 @@ export const newsItems: NewsItem[] = [
     content: 'Moving to San Francisco to grow my startup building intelligent tools for construction. Excited to bring human-centered AI to an industry ready for change.'
     },
     {
-    date: "Spring 2024",
+    date: "April 2024",
     image: {
     src: "/imgs/harvard-visit.jpg",
     alt: "Harvard University Campus"
@@ -24,7 +24,7 @@ export const newsItems: NewsItem[] = [
     content: 'Had a fantastic time presenting <a href="https://www.semanticscholar.org/paper/WorldSmith%3A-Iterative-and-Expressive-Prompting-for-Dang-Brudy/1ecd677e3d12bffec77d23db696610a7744cf33f" class="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener">WorldSmith</a> at UIST\'23 in San Francisco and reuniting with the Autodesk Research crew.'
     },
     {
-    date: "June 2023 - September 2023",
+    date: "September 2023",
     image: {
     src: "/imgs/toronto-view.jpg",
     alt: "The view to the gorgeous Toronto CN Tower from our office"
@@ -40,7 +40,7 @@ export const newsItems: NewsItem[] = [
     content: 'Made the most of CHI\'23 as a student volunteer while <a href="https://dl.acm.org/doi/10.1145/3544548.3580969" class="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener">presenting our research</a>. Great conversations and connections throughout the conference.'
     },
     {
-    date: "November 2022 - March 2023",
+    date: "November 2022",
     image: {
     src: "/imgs/autodesk-lunch.jpg",
     alt: "Last lunch with the amazing Autodesk HCI+Vis team in Toronto"
