@@ -2,6 +2,7 @@
 	import '@fortawesome/fontawesome-free/css/all.min.css';
 	import '../app.css';
 	export const prerender = true;
+	export const ssr = false;
 	let { children } = $props();
 </script>
 
