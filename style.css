@@ -218,18 +218,30 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
 /* ---------- now ---------- */
 
 .now-section {
-  background: var(--teal);
-  color: var(--pale-onDark);
+  background: var(--paper);
   padding: 10vh var(--pad);
 }
 
-.now-inner { max-width: 680px; margin: 0 auto; }
+.now-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(24px, 5vw, 72px);
+}
 
-.now-section h2 { color: var(--evergreen); margin-bottom: 24px; }
+.now-text { max-width: 480px; }
 
-.now-section p { margin-bottom: 1.2em; }
+.now-section h2 { margin-bottom: 24px; }
 
-.film-inline { margin-top: 6vh; }
+.now-section p { margin-bottom: 0; color: var(--ink-soft); }
+
+.now-avatar {
+  width: clamp(200px, 24vw, 300px);
+  height: auto;
+  flex: none;
+}
 
 /* ---------- footer ---------- */
 
@@ -273,6 +285,7 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
   .paper-grid .card,
   .p1, .p4, .p9 { grid-column: auto / span 12; }
   .intro { flex-direction: column-reverse; align-items: flex-start; padding-top: 4vh; }
+  .now-inner { flex-direction: column; align-items: flex-start; }
   .index-list a { grid-template-columns: 52px 1fr; }
   .ix-venue { grid-column: 2; text-align: left; }
 }
