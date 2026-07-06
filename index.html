@@ -80,7 +80,8 @@
 
     <div class="paper-grid">
 
-      <article class="card p1">
+      <div class="pg-feature">
+        <article class="card">
         <img src="assets/papers/corpusstudio.png" alt="CorpusStudio interface: text editor with section clusters and a retrieval panel of prior work examples" loading="lazy">
         <div class="card-body">
           <p class="card-meta">CHI 2025 · with Chelse Swoopes, Daniel Buschek, Elena Glassman · Harvard</p>
@@ -89,28 +90,11 @@
           <p class="card-links"><a href="https://doi.org/10.1145/3706598.3713974">Paper ↗</a></p>
         </div>
       </article>
+      </div>
 
-      <article class="card p2">
-        <img src="assets/papers/choice-over-control.png" alt="Four writing interface variants comparing diegetic and non-diegetic prompting" loading="lazy">
-        <div class="card-body">
-          <p class="card-meta">CHI 2023 · with Sven Goller, Florian Lehmann, Daniel Buschek</p>
-          <h3>Choice Over Control</h3>
-          <p class="card-desc">A study with 129 people writing with LLMs. Most preferred choosing between suggestions over instructing the model. Introduced the distinction between diegetic and non-diegetic prompting.</p>
-          <p class="card-links"><a href="https://doi.org/10.1145/3544548.3580969">Paper ↗</a></p>
-        </div>
-      </article>
-
-      <article class="card p3">
-        <img src="assets/papers/worldsmith.png" alt="WorldSmith interface for multimodal world building with text, sketching and region-based image generation" loading="lazy">
-        <div class="card-body">
-          <p class="card-meta">UIST 2023 · with Frederik Brudy, George Fitzmaurice, Fraser Anderson · Autodesk</p>
-          <h3>WorldSmith</h3>
-          <p class="card-desc">A tool for building fictional worlds by mixing text prompts, sketches and region edits, tile by tile. Built at Autodesk Research.</p>
-          <p class="card-links"><a href="https://doi.org/10.1145/3586183.3606772">Paper ↗</a> <a href="https://www.youtube.com/watch?v=U1iF6GVbHL4">Video ↗</a></p>
-        </div>
-      </article>
-
-      <article class="card p4">
+      <div class="pg-cols">
+        <div class="pg-col pg-left">
+          <article class="card">
         <img src="assets/papers/beyond-text-generation.png" alt="Text editor with continuously updated margin summaries next to each paragraph" loading="lazy">
         <div class="card-body">
           <p class="card-meta">UIST 2022 · with Karim Benharrak, Florian Lehmann, Daniel Buschek</p>
@@ -119,37 +103,7 @@
           <p class="card-links"><a href="https://doi.org/10.1145/3526113.3545672">Paper ↗</a></p>
         </div>
       </article>
-
-      <article class="card p5">
-        <img src="assets/papers/how-to-prompt.png" alt="Diagram of a graphical interface parsed into a zero-shot prompt" loading="lazy">
-        <div class="card-body">
-          <p class="card-meta">arXiv 2022 · with Lukas Mecke, Florian Lehmann, Sven Goller, Daniel Buschek</p>
-          <h3>How to Prompt?</h3>
-          <p class="card-desc">An early paper on prompting as an interaction problem, written before prompting was a household word. It became my most cited work.</p>
-          <p class="card-links"><a href="https://doi.org/10.48550/arXiv.2209.01390">Paper ↗</a></p>
-        </div>
-      </article>
-
-      <article class="card p6">
-        <div class="card-body">
-          <p class="card-meta">IUI 2025 · with Ben Lafreniere, Tovi Grossman, Kashyap Todi, Michelle Li · Meta Reality Labs</p>
-          <h3>Authoring LLM-Based Assistance</h3>
-          <p class="card-desc">How people set up context-aware LLM assistance for tasks in their own surroundings. Built during my time at Meta Reality Labs.</p>
-          <p class="card-links"><a href="https://doi.org/10.1145/3708359.3712164">Paper ↗</a></p>
-        </div>
-      </article>
-
-      <article class="card p7">
-        <img src="assets/papers/ganslider.png" alt="Slider interfaces for controlling generative image models, with and without feedforward previews" loading="lazy">
-        <div class="card-body">
-          <p class="card-meta">CHI 2022 · with Lukas Mecke, Daniel Buschek</p>
-          <h3>GANSlider</h3>
-          <p class="card-desc">How people explore generative image models with sliders, and what small preview thumbnails change about that exploration.</p>
-          <p class="card-links"><a href="https://doi.org/10.1145/3491102.3502141">Paper ↗</a></p>
-        </div>
-      </article>
-
-      <article class="card p8">
+          <article class="card">
         <img src="assets/papers/summarylens.png" alt="Three smartphone screens of an app that summarizes photographed text" loading="lazy">
         <div class="card-body">
           <p class="card-meta">IUI 2022 · with Karim Benharrak, Florian Lehmann, Daniel Buschek</p>
@@ -158,8 +112,44 @@
           <p class="card-links"><a href="https://doi.org/10.1145/3490100.3516471">Paper ↗</a></p>
         </div>
       </article>
-
-      <article class="card p9">
+          <article class="card card-teal">
+        <div class="card-body">
+          <p class="card-meta">IUI 2025 · with Ben Lafreniere, Tovi Grossman, Kashyap Todi, Michelle Li · Meta Reality Labs</p>
+          <h3>Authoring LLM-Based Assistance</h3>
+          <p class="card-desc">How people set up context-aware LLM assistance for tasks in their own surroundings. Built during my time at Meta Reality Labs.</p>
+          <p class="card-links"><a href="https://doi.org/10.1145/3708359.3712164">Paper ↗</a></p>
+        </div>
+      </article>
+          <article class="card">
+        <img src="assets/papers/how-to-prompt.png" alt="Diagram of a graphical interface parsed into a zero-shot prompt" loading="lazy">
+        <div class="card-body">
+          <p class="card-meta">arXiv 2022 · with Lukas Mecke, Florian Lehmann, Sven Goller, Daniel Buschek</p>
+          <h3>How to Prompt?</h3>
+          <p class="card-desc">An early paper on prompting as an interaction problem, written before prompting was a household word. It became my most cited work.</p>
+          <p class="card-links"><a href="https://doi.org/10.48550/arXiv.2209.01390">Paper ↗</a></p>
+        </div>
+      </article>
+        </div>
+        <div class="pg-col pg-right">
+          <article class="card">
+        <img src="assets/papers/worldsmith.png" alt="WorldSmith interface for multimodal world building with text, sketching and region-based image generation" loading="lazy">
+        <div class="card-body">
+          <p class="card-meta">UIST 2023 · with Frederik Brudy, George Fitzmaurice, Fraser Anderson · Autodesk</p>
+          <h3>WorldSmith</h3>
+          <p class="card-desc">A tool for building fictional worlds by mixing text prompts, sketches and region edits, tile by tile. Built at Autodesk Research.</p>
+          <p class="card-links"><a href="https://doi.org/10.1145/3586183.3606772">Paper ↗</a> <a href="https://www.youtube.com/watch?v=U1iF6GVbHL4">Video ↗</a></p>
+        </div>
+      </article>
+          <article class="card">
+        <img src="assets/papers/choice-over-control.png" alt="Four writing interface variants comparing diegetic and non-diegetic prompting" loading="lazy">
+        <div class="card-body">
+          <p class="card-meta">CHI 2023 · with Sven Goller, Florian Lehmann, Daniel Buschek</p>
+          <h3>Choice Over Control</h3>
+          <p class="card-desc">A study with 129 people writing with LLMs. Most preferred choosing between suggestions over instructing the model. Introduced the distinction between diegetic and non-diegetic prompting.</p>
+          <p class="card-links"><a href="https://doi.org/10.1145/3544548.3580969">Paper ↗</a></p>
+        </div>
+      </article>
+          <article class="card">
         <img src="assets/papers/gesturemap.png" alt="GestureMap tool showing a 2D embedding map of full-body motion data" loading="lazy">
         <div class="card-body">
           <p class="card-meta">CHI 2021 · with Daniel Buschek</p>
@@ -168,6 +158,17 @@
           <p class="card-links"><a href="https://doi.org/10.1145/3411764.3445765">Paper ↗</a></p>
         </div>
       </article>
+          <article class="card">
+        <img src="assets/papers/ganslider.png" alt="Slider interfaces for controlling generative image models, with and without feedforward previews" loading="lazy">
+        <div class="card-body">
+          <p class="card-meta">CHI 2022 · with Lukas Mecke, Daniel Buschek</p>
+          <h3>GANSlider</h3>
+          <p class="card-desc">How people explore generative image models with sliders, and what small preview thumbnails change about that exploration.</p>
+          <p class="card-links"><a href="https://doi.org/10.1145/3491102.3502141">Paper ↗</a></p>
+        </div>
+      </article>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -188,7 +189,7 @@
             <li><a href="https://x.com/dnghaiii">X</a></li>
           </ul>
           <p class="footer-colophon">
-            <span id="last-updated" data-updated="2026-07-07T01:16:00+02:00">Last updated July 2026</span> · Munich<br>
+            <span id="last-updated" data-updated="2026-07-07T01:25:00+02:00">Last updated July 2026</span> · Munich<br>
             <span id="cogitating">Cogitating since 0 seconds</span>
           </p>
         </footer>
