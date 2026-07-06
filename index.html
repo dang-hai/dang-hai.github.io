@@ -176,21 +176,22 @@
         <p>
           I'm building something new. It isn't public yet.
         </p>
+        <footer class="site-end" id="contact">
+          <ul class="footer-links">
+            <li><a href="https://github.com/dang-hai">GitHub</a></li>
+            <li><a href="https://scholar.google.de/citations?user=-BpP7hsAAAAJ">Scholar</a></li>
+            <li><a href="https://dblp.org/pid/286/8389.html">dblp</a></li>
+            <li><a href="https://x.com/dnghaiii">X</a></li>
+          </ul>
+          <p class="footer-colophon">
+            <span id="last-updated" data-updated="2026-07-07T01:00:00+02:00">Last updated July 2026</span> · Munich<br>
+            <span id="cogitating">Cogitating since 0 seconds</span>
+          </p>
+        </footer>
       </div>
       <img class="now-avatar" src="assets/img/avatar-typing.png" alt="A voxel figure of Hai sitting cross-legged on a chair, typing on a laptop" width="864" height="1184">
     </div>
   </section>
-
-  <!-- ============ CONTACT ============ -->
-  <footer class="footer" id="contact">
-    <ul class="footer-links">
-      <li><a href="https://github.com/dang-hai">GitHub</a></li>
-      <li><a href="https://scholar.google.de/citations?user=-BpP7hsAAAAJ">Scholar</a></li>
-      <li><a href="https://dblp.org/pid/286/8389.html">dblp</a></li>
-      <li><a href="https://x.com/dnghaiii">X</a></li>
-    </ul>
-    <p class="footer-colophon">Last updated July 2026 · Munich</p>
-  </footer>
 
 </main>
 
@@ -202,6 +203,43 @@
       v.setAttribute('controls', '');
     });
   }
+
+  (function () {
+    var updatedEl = document.getElementById('last-updated');
+    var cogitatingEl = document.getElementById('cogitating');
+    var updatedAt = new Date(updatedEl.getAttribute('data-updated')).getTime();
+    var loadedAt = Date.now();
+
+    function plural(n, word) {
+      return n + ' ' + word + (n === 1 ? '' : 's');
+    }
+
+    function sinceParts(ms) {
+      var s = Math.max(0, Math.floor(ms / 1000));
+      var days = Math.floor(s / 86400);
+      var hours = Math.floor((s % 86400) / 3600);
+      var minutes = Math.floor((s % 3600) / 60);
+      var seconds = s % 60;
+      var parts = [];
+      if (days) parts.push(plural(days, 'day'));
+      if (days || hours) parts.push(plural(hours, 'hour'));
+      parts.push(plural(minutes, 'minute'));
+      parts.push(plural(seconds, 'second'));
+      return parts.join(', ');
+    }
+
+    function tick() {
+      var now = Date.now();
+      updatedEl.textContent = 'Last updated ' + sinceParts(now - updatedAt) + ' ago';
+      var onPage = now - loadedAt;
+      cogitatingEl.textContent = 'Cogitating since ' +
+        (onPage < 60000 ? plural(Math.floor(onPage / 1000), 'second')
+                        : plural(Math.floor(onPage / 60000), 'minute'));
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  })();
 </script>
 
 </body>

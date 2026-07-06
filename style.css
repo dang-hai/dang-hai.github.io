@@ -219,7 +219,7 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
 
 .now-section {
   background: var(--paper);
-  padding: 10vh var(--pad);
+  padding: 10vh var(--pad) 12vh;
 }
 
 .now-inner {
@@ -243,35 +243,30 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
   flex: none;
 }
 
-/* ---------- footer ---------- */
+/* ---------- site end (inside now) ---------- */
 
-.footer {
-  background: var(--teal-deep);
-  color: var(--pale-onDark);
-  padding: 6vh var(--pad);
-}
+.site-end { margin-top: 9vh; }
 
 .footer-links {
   list-style: none;
-  max-width: 680px;
-  margin: 0 auto;
   display: flex;
   gap: clamp(16px, 3vw, 32px);
   flex-wrap: wrap;
   font-family: "Spline Sans Mono", monospace;
   font-size: 13px;
+  color: var(--teal);
 }
 
 .footer-links a { text-decoration: none; }
-.footer-links a:hover { color: var(--white); text-decoration: underline; text-underline-offset: 4px; }
+.footer-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
 .footer-colophon {
-  max-width: 680px;
-  margin: 28px auto 0;
+  margin-top: 24px;
   font-family: "Spline Sans Mono", monospace;
   font-size: 11.5px;
   letter-spacing: 0.06em;
-  color: #6C8B84;
+  line-height: 2;
+  color: #8AA294;
 }
 
 /* ---------- responsive ---------- */
