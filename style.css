@@ -113,7 +113,8 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
 
 .index-list { list-style: none; border-top: 1px solid var(--line); }
 
-.index-list a {
+.index-list a,
+.index-list .ix-row {
   display: grid;
   grid-template-columns: 64px 1fr auto;
   gap: 16px;
