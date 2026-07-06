@@ -1,25 +1,27 @@
 /* ============================================================
    HAI DANG — portfolio
-   Quiet version. Rams: as little design as possible.
+   Quiet, banded version.
+   Section bands: paper (intro) → white (index) → moss tint
+   (research, full-width asymmetric grid) → teal (now) →
+   deep teal (footer).
    Palette (70/20/10):
      neutral  #F6FBF1 paper, #FFFFFF white, #14262A ink
-     accent   #003A41 deep teal, #CBE5C2 evergreen (sparingly)
-     cta      #C4441A warm orange (mail link only)
+     accent   #003A41 deep teal, #E9F3DF moss, #CBE5C2 evergreen
    Type: Spline Sans (body) · Archivo (headings, sentence case)
-         Spline Sans Mono (index, captions, meta)
+         Spline Sans Mono (index, meta)
    No shadows, no gradients, flat surfaces only.
    ============================================================ */
 
 :root {
   --paper: #F6FBF1;
   --white: #FFFFFF;
+  --moss: #E7F1DC;
   --ink: #14262A;
   --ink-soft: #4A5D5F;
   --teal: #003A41;
   --teal-deep: #04282C;
   --evergreen: #CBE5C2;
   --pale-onDark: #D3E4CC;
-  --cta: #C4441A;
   --line: #D6E4CF;
   --gap: 6px;
   --pad: clamp(20px, 4vw, 48px);
@@ -64,7 +66,6 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
   font-family: "Spline Sans Mono", monospace;
   font-size: 13px;
   color: var(--ink);
-  background: var(--paper);
 }
 
 .nav-name { white-space: nowrap; font-weight: 500; }
@@ -74,60 +75,39 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
 
 .nav-links { display: flex; gap: clamp(12px, 2.5vw, 28px); flex-wrap: wrap; justify-content: flex-end; }
 
-/* ---------- opening film ---------- */
-
-.opening { background: var(--teal-deep); }
-
-.opening video {
-  width: 100%;
-  height: calc(92svh - 54px);
-  object-fit: cover;
-}
-
-.opening-caption,
-.film-caption {
-  font-family: "Spline Sans Mono", monospace;
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  color: var(--ink-soft);
-}
-
-.opening-caption {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 12px var(--pad) 14px;
-  color: #7FA098;
-}
-
-/* ---------- intro ---------- */
+/* ---------- intro (hero) ---------- */
 
 .intro {
-  max-width: 680px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 12vh var(--pad) 6vh;
+  padding: 10vh var(--pad) 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(24px, 5vw, 72px);
 }
+
+.intro-text { max-width: 560px; }
 
 .intro h1 { font-size: clamp(28px, 3vw, 36px); margin-bottom: 28px; }
 
 .intro p { margin-bottom: 1.2em; }
 .intro p:last-child { margin-bottom: 0; color: var(--ink-soft); }
 
-/* ---------- sections ---------- */
-
-.index-section,
-.work-section {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 8vh var(--pad) 4vh;
-}
-
-.section-note {
-  max-width: 60ch;
-  color: var(--ink-soft);
-  margin: 14px 0 40px;
+.intro-avatar {
+  width: clamp(200px, 26vw, 330px);
+  height: auto;
+  flex: none;
 }
 
 /* ---------- index ---------- */
+
+.index-section {
+  background: var(--white);
+  padding: 10vh var(--pad);
+}
+
+.index-inner { max-width: var(--maxw); margin: 0 auto; }
 
 .index-section h2 { margin-bottom: 24px; }
 
@@ -145,18 +125,38 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
   font-size: 14px;
 }
 
-.index-list a:hover { background: var(--white); }
+.index-list a:hover { background: var(--paper); }
 
 .ix-year { color: var(--ink-soft); }
 .ix-title { font-weight: 400; }
 .ix-venue { color: var(--ink-soft); font-size: 12.5px; text-align: right; }
 
-/* ---------- cards ---------- */
+/* ---------- research: full-width asymmetric grid ---------- */
 
-.card-grid {
+.work-section {
+  background: var(--moss);
+  padding: 10vh var(--pad) 12vh;
+}
+
+.work-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px 48px;
+  margin-bottom: 56px;
+}
+
+.section-note {
+  max-width: 58ch;
+  color: var(--ink-soft);
+}
+
+.paper-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: var(--gap);
+  align-items: start;
 }
 
 .card {
@@ -165,7 +165,16 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
   flex-direction: column;
 }
 
-.card-wide { grid-column: span 2; }
+/* asymmetric placement, full width of the page */
+.p1 { grid-column: 1 / span 7; }
+.p2 { grid-column: 8 / span 5; }
+.p3 { grid-column: 1 / span 5; }
+.p4 { grid-column: 6 / span 7; }
+.p5 { grid-column: 2 / span 5; }
+.p6 { grid-column: 7 / span 4; }
+.p7 { grid-column: 1 / span 6; }
+.p8 { grid-column: 7 / span 6; }
+.p9 { grid-column: 4 / span 8; }
 
 .card img { width: 100%; height: auto; padding: 14px 14px 0; }
 
@@ -174,6 +183,7 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex: 1;
 }
 
 .card-meta {
@@ -184,30 +194,32 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
 
 .card h3 { font-size: 20px; }
 
-.card-desc { color: var(--ink-soft); font-size: 15.5px; max-width: 72ch; }
+.card-desc { color: var(--ink-soft); font-size: 15.5px; }
 
 .card-links {
   font-family: "Spline Sans Mono", monospace;
   font-size: 13.5px;
-  margin-top: 6px;
+  margin-top: auto;
+  padding-top: 10px;
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
 }
 
-.card-links a {
-  color: var(--teal);
-  text-decoration: none;
-}
-
+.card-links a { color: var(--teal); text-decoration: none; }
 .card-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* the one text-only card sits on teal */
+.p6 { background: var(--teal); }
+.p6 h3 { color: var(--evergreen); }
+.p6 .card-meta, .p6 .card-desc { color: var(--pale-onDark); }
+.p6 .card-links a { color: var(--evergreen); }
 
 /* ---------- now ---------- */
 
 .now-section {
   background: var(--teal);
   color: var(--pale-onDark);
-  margin-top: 8vh;
   padding: 10vh var(--pad);
 }
 
@@ -219,37 +231,18 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
 
 .film-inline { margin-top: 6vh; }
 
-.film-inline .film-caption { color: var(--pale-onDark); opacity: 0.75; padding-top: 12px; }
-
 /* ---------- footer ---------- */
 
 .footer {
-  background: var(--teal);
+  background: var(--teal-deep);
   color: var(--pale-onDark);
-  padding: 0 var(--pad) 4vh;
+  padding: 6vh var(--pad);
 }
-
-.footer-line {
-  max-width: 680px;
-  margin: 0 auto;
-  padding-top: 2vh;
-  border-top: 1px solid #0E4A50;
-}
-
-.footer-mail {
-  font-family: "Spline Sans Mono", monospace;
-  font-size: clamp(16px, 2vw, 20px);
-  color: var(--white);
-  text-decoration: none;
-  border-bottom: 2px solid var(--cta);
-}
-
-.footer-mail:hover { color: var(--evergreen); }
 
 .footer-links {
   list-style: none;
   max-width: 680px;
-  margin: 28px auto 0;
+  margin: 0 auto;
   display: flex;
   gap: clamp(16px, 3vw, 32px);
   flex-wrap: wrap;
@@ -262,7 +255,7 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
 
 .footer-colophon {
   max-width: 680px;
-  margin: 40px auto 0;
+  margin: 28px auto 0;
   font-family: "Spline Sans Mono", monospace;
   font-size: 11.5px;
   letter-spacing: 0.06em;
@@ -271,12 +264,17 @@ h2 { font-size: clamp(24px, 2.6vw, 32px); }
 
 /* ---------- responsive ---------- */
 
-@media (max-width: 860px) {
-  .card-grid { grid-template-columns: 1fr; }
-  .card-wide { grid-column: auto; }
+@media (max-width: 1100px) {
+  .paper-grid .card { grid-column: auto / span 6; }
+  .p1, .p4, .p9 { grid-column: auto / span 12; }
+}
+
+@media (max-width: 720px) {
+  .paper-grid .card,
+  .p1, .p4, .p9 { grid-column: auto / span 12; }
+  .intro { flex-direction: column-reverse; align-items: flex-start; padding-top: 4vh; }
   .index-list a { grid-template-columns: 52px 1fr; }
   .ix-venue { grid-column: 2; text-align: left; }
-  .opening video { height: 64svh; }
 }
 
 @media (prefers-reduced-motion: reduce) {
